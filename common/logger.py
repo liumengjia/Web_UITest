@@ -10,11 +10,13 @@ class Logger():
     def __init__(self,logger=None):
         self.logger=logging.getLogger(logger)
         default_level=logging.INFO
+
         dirname = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
-        path = dirname + '\config\logging.yaml'
+
+        path = dirname + '/config/logging.yaml'
         if os.path.exists(path):
             with open(path,'rt',encoding="utf-8") as f:
-                config=yaml.load(f)
+                config=yaml.safe_load(f)
             logging.config.dictConfig(config)
         else:
             logging.basicConfig(level=default_level)
@@ -23,4 +25,5 @@ class Logger():
     def getLogger(self):
         return self.logger
 
-
+if __name__=='__main__':
+    l1 = Logger()

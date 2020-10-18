@@ -2,8 +2,9 @@
 
 testSuite:
     module:
-        crm/test_login.py
+        index/test_index.py
+
 
 #设置失败重跑次数
 
-retrys: 0
+retrys: 2

@@ -18,21 +18,23 @@ handlers:
         level: DEBUG
         formatter: simple
         stream: ext://sys.stdout
+
     #info等级文件配置
     info_file_handler:
         class: logging.handlers.RotatingFileHandler
         level: INFO
         formatter: simple
-        filename: C:\Users\djcps\Desktop\uiTest\logs\info.log
+        filename: /Users/liumengjia/Documents/Project/web端UI自动化/uiTest/logs/info.log
         maxBytes: 10485760 # 10MB
         backupCount: 20 #most 20 extensions
         encoding: utf8
+
     #error等级文件配置
     error_file_handler:
         class: logging.handlers.RotatingFileHandler
         level: ERROR
         formatter: simple
-        filename: C:\Users\djcps\Desktop\uiTest\logs\errors.log
+        filename: /Users/liumengjia/Documents/Project/web端UI自动化/uiTest/logs/errors.log
         maxBytes: 10485760 # 10MB
         backupCount: 20
         encoding: utf8

@@ -5,7 +5,6 @@
 from common import basePage
 from selenium import webdriver
 
-
 class LoginPage(basePage.BasePage):
 
     '''统一登录网址'''
@@ -30,12 +29,8 @@ class LoginPage(basePage.BasePage):
         self.sendKeys(self.crm_password,text=password)
         self.click(self.crm_login_button)
 
-
-
 if __name__ == '__main__':
 
     driver=webdriver.Chrome()
     login_page=LoginPage(driver)
     login_page.crm_login()
-
-

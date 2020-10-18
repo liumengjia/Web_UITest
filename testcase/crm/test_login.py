@@ -4,8 +4,6 @@ from selenium import webdriver
 from allure import MASTER_HELPER
 
 
-
-
 @MASTER_HELPER.feature("CRM登陆")
 class TestLogin():
 
@@ -24,8 +22,6 @@ class TestLogin():
     def test_login_001(self):
         with MASTER_HELPER.step("登陆CRM"):
             self.login_page.crm_login()
-
-
 
     @MASTER_HELPER.testcase("用例名：登陆CRM——账号错误")
     def test_login_002(self):
